@@ -1,7 +1,7 @@
 # dev (vagrant):
 # ------------------
 [app]
-app.test.dev
+findit.test.dev
 
 #[db]
 #db.test.dev

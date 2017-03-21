@@ -1,2 +1,10 @@
 ---
-# include project playbooks here
+- name: Deploy FindIt  
+  hosts: all
+  become: true
+
+  roles:
+  - { role: findit }
+  - { role: apache }
+  - { role: passenger }
+  - { role: ruby }

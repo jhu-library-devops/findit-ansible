@@ -12,6 +12,9 @@ OS="centos" # "debian" || "centos"
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
+
+  config.vbguest.auto_update = false
+
   package=""
   if OS=="debian"
     config.vm.box = "debian/jessie64"
@@ -27,7 +30,7 @@ Vagrant.configure(2) do |config|
   {
     # 'solr'  => '10.11.12.103',
     # 'db'    => '10.11.12.102',
-    'app'   => '10.11.12.101'
+    'findit'   => '10.11.12.101'
   }.each do |short_name, ip|
     config.vm.define short_name do |host|
       host.vm.network 'private_network', ip: ip
@@ -40,11 +43,11 @@ Vagrant.configure(2) do |config|
 
       host.vm.provider "virtualbox" do |vb|
         vb.name = "#{short_name}.#{domain}"
-        vb.memory = 256
+        vb.memory = 1024
         vb.linked_clone = true
       end
 
-      if short_name == "app" # last in the list
+      if short_name == "findit" # last in the list
         setup_complete = true
       end
 
@@ -58,7 +61,7 @@ Vagrant.configure(2) do |config|
           ansible.inventory_path = "inventory/vagrant"
           ansible.playbook = "setup.yml"
           ansible.limit = "all"
-          ansible.verbose = "vvv"
+          ansible.verbose = "v"
         end
       end
     end

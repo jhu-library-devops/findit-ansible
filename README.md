@@ -3,7 +3,7 @@
 TODO documentation for the find-it ansible
 
 - Following https://codhicitta.github.io/ansible/devops/2017/01/14/ansible-workflow.html
--
+- require apache, rails, passenger roles from Drew
 -
 -
 -

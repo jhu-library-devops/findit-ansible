@@ -6,8 +6,6 @@ project:        "findit-ansible"
 version:        "0.1.0"
 login_user:     "deploy"
 
-local_pki_directory:  "~/.ssh/findit-ansible"
-
 # ssh vars
 ssh_port: 22
 # uncomment after first run (if not 22):
