@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-domain          = "test.dev"
+domain          = "test.local"
 setup_complete  = false
 
 # NOTE: currently using the same OS for all boxen
@@ -12,8 +12,6 @@ OS="centos" # "debian" || "centos"
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
-
-  config.vbguest.auto_update = false
 
   package=""
   if OS=="debian"
