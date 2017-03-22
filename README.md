@@ -1,57 +1,27 @@
-# anseedble
+# FindIt ansible
 
-TODO documentation for the find-it ansible
+Manage [FindIt](https://github.com/jhu-sheridan-libraries/umlaut_jh) : JHU implementation of [Umlaut](https://github.com/team-umlaut/umlaut) from development to production using Ansible.
 
-- Following https://codhicitta.github.io/ansible/devops/2017/01/14/ansible-workflow.html
-- require apache, rails, passenger roles from Drew
--
--
--
-A starting point for Ansible projects. Includes Vagrantfile and scripts for setting up VMs for ansibilization.
+The project was seeded using the [Anseedble](https://github.com/dheles/anseedble) project by Drew Heles and following the accompanying Ansible Workflow](https://codhicitta.github.io/ansible/devops/2017/01/14/ansible-workflow.html) blog.
 
-## things done by default:
+## Development (Vagrant)
 
-### sets up a login user
-via the [login-user role](https://github.com/dheles/ansible-role-login-user)
+Local development is done using Vagrant, and a Vagrantfile is included.
+Ensure you have VirtualBox, Ansible, and vagrant-hostsupdater plugin installed.
 
-#### creates the user
+Bring up the box and provision using the following 
+```
+vagrant up
+ansible-playbook -i inventory/vagrant main.yml
+```
 
-    login_user: "deploy"
+# TODO
 
-#### gives it sudo
+Write the findit-ansible-role which should
+- checks out the code
+- set sensible defaults within the role
 
-TODO: grant the power to change
+Overide findit defaults and add vault encrypted secrets
 
-#### creates and deploys ssh keys for the user on the server
-
-    create_login_user_key:  true
-    login_user_key:         "{{ project }}_{{ environ }}"
-    login_user_passphrase:  "change me in the vault file for the environment"
-    key_type:               "rsa"
-    key_size:               4096
-
-### creates an ssh config entry
-looks like this:
-
-    # BEGIN app.test.dev dev
-    Host app.test.dev app
-    Hostname app.test.dev
-    User deploy
-    IdentityFile ~/.ssh/anseedble_dev
-    PreferredAuthentications publickey
-    IdentitiesOnly yes
-    StrictHostKeyChecking no
-    UserKnownHostsFile=/dev/null
-    # END app.test.dev dev
-
-not what you want? np. just say nah:
-
-    create_ssh_config_entry: no
-
-### secures ssh
-
-TODO: deets
-
-## recommended
-(but not required): vagrant hostsupdater plugin
-https://github.com/cogitatio/vagrant-hostsupdater
+Write a ansible-role-mysql 
+- 
