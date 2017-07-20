@@ -4,7 +4,7 @@
         "10.0.2.15"
     ], 
     "ansible_all_ipv6_addresses": [
-        "fe80::a00:27ff:fe67:f622", 
+        "fe80::a00:27ff:fe2e:ef28", 
         "fe80::5054:ff:fe47:4652"
     ], 
     "ansible_apparmor": {
@@ -29,16 +29,16 @@
     "ansible_date_time": {
         "date": "2017-07-20", 
         "day": "20", 
-        "epoch": "1500577846", 
-        "hour": "19", 
-        "iso8601": "2017-07-20T19:10:46Z", 
-        "iso8601_basic": "20170720T191046170409", 
-        "iso8601_basic_short": "20170720T191046", 
-        "iso8601_micro": "2017-07-20T19:10:46.170469Z", 
-        "minute": "10", 
+        "epoch": "1500582176", 
+        "hour": "20", 
+        "iso8601": "2017-07-20T20:22:56Z", 
+        "iso8601_basic": "20170720T202256956994", 
+        "iso8601_basic_short": "20170720T202256", 
+        "iso8601_micro": "2017-07-20T20:22:56.957096Z", 
+        "minute": "22", 
         "month": "07", 
-        "second": "46", 
-        "time": "19:10:46", 
+        "second": "56", 
+        "time": "20:22:56", 
         "tz": "UTC", 
         "tz_offset": "+0000", 
         "weekday": "Thursday", 
@@ -135,8 +135,8 @@
         "SELINUX_USE_CURRENT_RANGE": "", 
         "SHELL": "/bin/bash", 
         "SHLVL": "2", 
-        "SSH_CLIENT": "10.11.12.1 55631 22", 
-        "SSH_CONNECTION": "10.11.12.1 55631 10.11.12.104 22", 
+        "SSH_CLIENT": "10.11.12.1 57356 22", 
+        "SSH_CONNECTION": "10.11.12.1 57356 10.11.12.104 22", 
         "SSH_TTY": "/dev/pts/0", 
         "TERM": "xterm-256color", 
         "USER": "vagrant", 
@@ -275,12 +275,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::a00:27ff:fe67:f622", 
+                "address": "fe80::a00:27ff:fe2e:ef28", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "08:00:27:67:f6:22", 
+        "macaddress": "08:00:27:2e:ef:28", 
         "module": "e1000", 
         "mtu": 1500, 
         "pciid": "0000:00:08.0", 
@@ -372,17 +372,17 @@
         "type": "loopback"
     }, 
     "ansible_machine": "x86_64", 
-    "ansible_machine_id": "a6e9e52a446a4415b756118c0c6de51e", 
-    "ansible_memfree_mb": 749, 
+    "ansible_machine_id": "6a5a760cf7104bdc82afb2f9f6747774", 
+    "ansible_memfree_mb": 753, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 851, 
-            "used": 141
+            "free": 854, 
+            "used": 138
         }, 
         "real": {
-            "free": 749, 
+            "free": 753, 
             "total": 992, 
-            "used": 243
+            "used": 239
         }, 
         "swap": {
             "cached": 0, 
@@ -457,9 +457,9 @@
         "type": "targeted"
     }, 
     "ansible_service_mgr": "systemd", 
-    "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDNw3EOWQaapf6gbJYVK8FJblZmtWuPdcFtg2a1WkI7tRNccanUbxobRhGwe59Dsqsh4T3JFNMfRJOS69FNmrS4=", 
-    "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAID0ZGIvajWfJfBWBn7nZKEgDh4ijsnE8FnCSxda2edP2", 
-    "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDG4aXA5iywvtz4nyg3bDLLySn98OPF+egSVQ0emNaNTUHRkYRLOoATxErEauJGfJ4bKDTe/+txiyPrmS/lOU8+/mAdqSzmYjZp6Q5sI99o/8AGjVLf7bfEW1pTToMTjqZv9KAdkK7d0XYF1N29dh9n6lDRKPNrgNLsY9Nt6aT6XbMfFyEcScI6MF8lhNVbAK2i0Zx64ZD9zzZ1KhKRy92PNtOXOpgaP6aE9wASFZmAIL2Dbb5Yf4dEgWCtqDIbF0QtQvWGqu/Igp3Y1AkfHeReBteSQnjWE73cJpTe8btW5WHCGC74/1zkBx+x9qa2l4bnFQ71zJaBv58amIY8K/bX", 
+    "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4ZNeNs9B2+JgVDoyWQ0lN0wB7EoUnQqqF0x1rtIWqDp4MZJlekhmkQAA62Jt9p6M2nDmH3u13Tr5iGrgEclho=", 
+    "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIGqNAFkd+b1yfLDLzHgIRnJKJQ80FlPIHuxgnQG9mDh3", 
+    "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCrMps1U8CVQzrNwuM9OCxKpQYrAbyhTqALSzSkaQBOmOBPc7WOwoyx0fy6UBKCmTneBX/mdmgPAFstsuIJVHguYUbp/6J6Hi6W2Ftf+y8+BkP0iE3dUfBKpvk/zqcf+lI27fCZibLnSrk9xYZFkOd5jq39d+fkk9kkgoLQeL7R7UZwrEQbgSERqocAzoKKW87B4n8pDme8XmUz74mSqO6vn3TDz3tza5ZDNu2HmmaxwVI7TWV2XXIyMvC195RWiSBPoIfAmwYTHjQsE+pXcADS8lnHJiMJbRr/fKiYLZJwxko8TwvJJKoGi27GOEVlXK+lmZzQc+OOz22mzF0vI1RT", 
     "ansible_swapfree_mb": 1535, 
     "ansible_swaptotal_mb": 1535, 
     "ansible_system": "Linux", 
@@ -468,7 +468,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "innotek GmbH", 
-    "ansible_uptime_seconds": 24, 
+    "ansible_uptime_seconds": 23, 
     "ansible_user_dir": "/home/vagrant", 
     "ansible_user_gecos": "vagrant", 
     "ansible_user_gid": 1000, 
