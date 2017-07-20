@@ -10,3 +10,6 @@ login_user:     "deploy"
 ssh_port: 22
 # uncomment after first run (if not 22):
 # ansible_ssh_port: "{{ ssh_port }}"
+
+ssh_pub_keys:
+ - ~/.ssh/findit-ansible/findit-ansible_dev.pub

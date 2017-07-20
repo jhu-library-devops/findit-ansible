@@ -14,8 +14,11 @@
 - src: https://github.com/dheles/ansible-role-passenger
   name: passenger
 
-- src: https://github.com/dheles/ansible-role-ruby
-  name: ruby
+- src: https://github.com/farooqsadiq/ansible-chruby.git
+  name: chruby
+
+  #- src: https://github.com/dheles/ansible-role-ruby
+  #name: ruby
 
   #- src: https://github.com/jhu-sheridan-libraries/findit-ansible-role
   #name: findit

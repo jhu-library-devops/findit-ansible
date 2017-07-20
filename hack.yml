@@ -1,0 +1,12 @@
+---
+- hosts: app
+  become: true
+
+  tasks:
+   - name: HACK Add usr local bin path
+     lineinfile:
+       dest:   "/etc/profile.d/_hack_local_path.sh"
+       line:   "[[ \":$PATH:\" != *\":/usr/local/bin:\"* ]] && PATH=\"/usr/local/bin:${PATH}\""
+       state:  present
+       create: yes
+

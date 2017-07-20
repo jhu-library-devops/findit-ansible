@@ -1,10 +1,10 @@
 ---
-- name: Deploy FindIt  
+- name: Build FindIt  
   hosts: all
   become: true
 
   roles:
-  - { role: findit }
+  - { role: chruby }
   - { role: apache }
   - { role: passenger }
-  - { role: ruby }
+  - { role: findit }
