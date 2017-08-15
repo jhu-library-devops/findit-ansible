@@ -61,7 +61,7 @@ Vagrant.configure(2) do |config|
         host.vm.provision "ansible" do |ansible|
           ansible.galaxy_role_file = "requirements.yml"
           ansible.inventory_path = "inventory/vagrant"
-          ansible.playbook = "vagrant.yml"
+          ansible.playbook = "setup.yml"
           ansible.limit = "all"
           ansible.verbose = "v"
         end
