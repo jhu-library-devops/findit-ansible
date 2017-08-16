@@ -1,15 +1,7 @@
 # dev (vagrant):
 # ------------------
-[deploy]
-deploy.findit.test
-
-[build]
-build.findit.test
-
-#[db]
-#db.findit.test
+[findit]
+findit.test
 
 [dev:children]
-build
-deploy
-#db
+findit

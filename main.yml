@@ -7,4 +7,5 @@
   - { role: chruby }
   - { role: apache }
   - { role: passenger }
-  - { role: findit }
+  - { role: deploy-keys, tags: ['deploy-keys']}
+  - { role: findit, tags: ['findit'] }

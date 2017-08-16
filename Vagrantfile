@@ -4,7 +4,7 @@
 # cannot use .dev as we get an error 
 #  : gem update --system, your-dns-needs-immediate-attention.dev
 #
-domain          = "findit.test"
+domain          = "test"
 setup_complete  = false
 
 # NOTE: currently using the same OS for all boxen
@@ -29,10 +29,7 @@ Vagrant.configure(2) do |config|
   end
 
   {
-    # 'solr'  => '10.11.12.103',
-    # 'db'    => '10.11.12.102',
-    'build'   => '10.11.12.101',
-    'deploy'   => '10.11.12.104'
+    'findit'   => '10.11.12.101',
   }.each do |short_name, ip|
     config.vm.define short_name do |host|
       host.vm.network 'private_network', ip: ip
@@ -49,7 +46,7 @@ Vagrant.configure(2) do |config|
         vb.linked_clone = true
       end
 
-      if short_name == "deploy" # last in the list
+      if short_name == "findit" # last in the list
         setup_complete = true
       end
 

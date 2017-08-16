@@ -19,3 +19,6 @@
 
 - src: https://github.com/jhu-sheridan-libraries/findit-ansible-role
   name: findit
+
+- src: https://github.com/dheles/deploy-keys-ansible-role
+  name: deploy-keys
