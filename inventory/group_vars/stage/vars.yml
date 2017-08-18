@@ -1,0 +1,40 @@
+---
+# setup vars
+environ:  "stage" # dev || stage || prod
+
+# private vars
+login_user_passphrase: "{{ vault_login_user_passphrase }}"
+
+hostname:    "build"
+domainname:  "findit.test"
+
+rails_env: "production"
+
+#chruby_chruby_version: 0.3.9
+#chruby_chruby_checksum: 7220a96e355b8a613929881c091ca85ec809153988d7d691299e0a16806b42fd
+#chruby_chruby_exec_command: /usr/local/bin/chruby-exec
+
+#chruby_ruby_install_version: 0.5.0
+#chruby_ruby_install_checksum: aa4448c2c356510cc7c2505961961a17bd3f3435842831e04c8516eb703afd19.
+#chruby_ruby_install_command: /usr/local/bin/ruby-install
+
+chruby_ruby_version: "ruby-2.2.2"
+
+findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private_key }}"
+findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"
+
+passenger_deploy_rails:       true
+passenger_base_deploy_dir:    "/opt/apps"
+
+findit_db_host:   "dev01.mse.jhu.edu"
+findit_db_name:   "findit"
+findit_db_pass:   "{{ vault_findit_db_pass }}"
+
+sfx_db_host:     "sfx.library.jhu.edu"
+sfx_db_port:     "3310"
+sfx_db_name:     "sfxlcl41"
+sfx_db_user:     "externalapp"
+sfx_db_pass:     "{{ vault_sfx_db_pass }}" 
+
+# TODO Cannot get os for findit role,  the env variables to load
+apache_service: "httpd"
