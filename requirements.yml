@@ -11,10 +11,10 @@
 - src: https://github.com/dheles/ansible-role-apache
   name: apache
 
-- src: https://github.com/farooqsadiq/ansible-role-passenger
+- src: https://github.com/dheles/ansible-role-passenger
   name: passenger
 
-- src: https://github.com/farooqsadiq/ansible-chruby.git
+- src: https://github.com/dheles/ansible-chruby.git
   name: chruby
 
 - src: https://github.com/jhu-sheridan-libraries/findit-ansible-role
