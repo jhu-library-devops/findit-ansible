@@ -5,8 +5,8 @@ environ:  "stage" # dev || stage || prod
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
 
-hostname:    "build"
-domainname:  "findit.test"
+hostname:    "test-findit"
+domainname:  "library.jhu.edu"
 
 rails_env: "production"
 

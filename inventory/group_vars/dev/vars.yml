@@ -5,8 +5,8 @@ environ:  "dev" # dev || stage || prod
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
 
-hostname:    "build"
-domainname:  "findit.test"
+hostname:    "findit"
+domainname:  "test"
 
 rails_env: "development"
 
@@ -24,7 +24,7 @@ findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private
 findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"
 
 passenger_deploy_rails:       true
-passenger_base_deploy_dir:    "/opt/apps"
+passenger_base_deploy_dir:    "/opt"
 
 findit_db_host:    "dev01.mse.jhu.edu"
 findit_db_name:       "findit"
