@@ -22,7 +22,7 @@ rails_env: "production"
 #chruby_ruby_install_checksum: aa4448c2c356510cc7c2505961961a17bd3f3435842831e04c8516eb703afd19.
 #chruby_ruby_install_command: /usr/local/bin/ruby-install
 
-chruby_ruby_version: ruby-2.2.2
+chruby_ruby_version: "ruby-2.2.2"
 
 findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private_key }}"
 findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"
@@ -40,7 +40,7 @@ sfx_db_host:    "sfx.library.jhu.edu"
 sfx_db_port:    "3310"
 sfx_db_name:    "sfxlcl41"
 sfx_db_user:    "externalapp"
-sfx_db_pass:  "{{ vault_sfx_db_pass }}"
+sfx_db_pass:    "{{ vault_sfx_db_pass }}"
 
 # TODO Cannot get os for findit role,  the env variables to load
 apache_service: "httpd"
