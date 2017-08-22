@@ -1,5 +1,5 @@
 ---
-- name: Build FindIt  
+- name: Build FindIt
   hosts: findit
 
   roles:
@@ -8,3 +8,4 @@
     - { role: passenger, tags: ['passenger'] }
     - { role: deploy-keys, tags: ['deploy-keys']}
     - { role: findit, tags: ['findit'] }
+    - { role: shib, tags: ['shib'] }

@@ -5,8 +5,11 @@ environ:  "stage" # dev || stage || prod
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
 
-hostname:    "test-findit"
-domainname:  "library.jhu.edu"
+# apache vars:
+hostname:               "test-{{ app_name }}"
+domainname:             "library.jhu.edu"
+apache_remove_welcome:  false
+apache_https:           true
 
 rails_env: "production"
 
@@ -43,6 +46,7 @@ apache_service: "httpd"
 apache_https:   true
 
 ssl_self_sign_cert:               false
+ssl_provided_cert:                true
 ssl_certificate_file:             "star_library_jhu_edu.crt"
 ssl_certificate_content:          "{{ vault_ssl_certificate_content }}"
 ssl_certificate_key_file:         "star_library_jhu_edu.key"
