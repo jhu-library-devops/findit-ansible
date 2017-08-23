@@ -9,7 +9,7 @@ The project was seeded using the [Anseedble](https://github.com/dheles/anseedble
 Local development is done using Vagrant, and a Vagrantfile is included.
 Ensure you have VirtualBox, Ansible, and vagrant-hostsupdater plugin installed.
 
-Bring up the box and provision using the following 
+Bring up the box and provision using the following
 ```
 vagrant up
 ansible-playbook -i inventory/vagrant main.yml
@@ -17,11 +17,6 @@ ansible-playbook -i inventory/vagrant main.yml
 
 # TODO
 
-Write the findit-ansible-role which should
-- checks out the code
-- set sensible defaults within the role
-
-Overide findit defaults and add vault encrypted secrets
-
-Write a ansible-role-mysql 
-- 
+Refactor to remove the use of findit_app_user_ssh_private_key
+Write a ansible-role-mysql
+-

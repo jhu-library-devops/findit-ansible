@@ -22,3 +22,6 @@
 
 - src: https://github.com/dheles/deploy-keys-ansible-role
   name: deploy-keys
+
+- src: https://github.com/farooqsadiq/shibboleth-sp-ansible-role
+  name: shib
