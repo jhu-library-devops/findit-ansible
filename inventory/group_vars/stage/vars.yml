@@ -27,23 +27,22 @@ findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private
 findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"
 
 passenger_deploy_rails:       true
-passenger_base_deploy_dir:    "/opt/apps"
+passenger_base_deploy_dir:    "/opt"
 
-findit_db_host:   "dev01.mse.jhu.edu"
-findit_db_name:   "findit"
-findit_db_pass:   "{{ vault_findit_db_pass }}"
+findit_db_host:    "dev01.mse.jhu.edu"
+findit_db_name:    "findit"
+findit_db_user:    "findit"
+findit_db_pass:    "{{ vault_findit_db_pass }}"
 findit_app_branch: "ansibilize"
 
-sfx_db_host:     "sfx.library.jhu.edu"
-sfx_db_port:     "3310"
-sfx_db_name:     "sfxlcl41"
-sfx_db_user:     "externalapp"
-sfx_db_pass:     "{{ vault_sfx_db_pass }}"
+sfx_db_host:    "sfx.library.jhu.edu"
+sfx_db_port:    "3310"
+sfx_db_name:    "sfxlcl41"
+sfx_db_user:    "externalapp"
+sfx_db_pass:    "{{ vault_sfx_db_pass }}"
 
 # TODO Cannot get os for findit role,  the env variables to load
 apache_service: "httpd"
-
-apache_https:   true
 
 ssl_self_sign_cert:               false
 ssl_provided_cert:                true
@@ -54,3 +53,9 @@ ssl_certificate_key_content:      "{{ vault_ssl_certificate_key_content }}"
 ssl_certificate_chain_file:       "star_library_jhu_edu_interm.crt"
 ssl_certificate_chain_content:    "{{ vault_ssl_certificate_chain_content }}"
 ssl_certificate_chain_path:       "/etc/pki/tls/certs"
+
+#shib
+shib_sp_cert:           "{{ vault_shib_sp_cert }}"
+shib_sp_key:            "{{ vault_shib_sp_key }}"
+shib_idp_metadata_xml:  "{{ vault_shib_idp_metadata_xml}}"
+shib_entity_id:         "findit.library.jhu.edu"
