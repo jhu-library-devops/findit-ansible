@@ -29,8 +29,8 @@ findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_
 passenger_deploy_rails:       true
 passenger_base_deploy_dir:    "/opt"
 
-findit_db_host:    "dev01.mse.jhu.edu"
-findit_db_name:    "findit"
+findit_db_host:    "mariadb.dev.mse.jhu.edu"
+findit_db_name:    "findit_test"
 findit_db_user:    "findit"
 findit_db_pass:    "{{ vault_findit_db_pass }}"
 findit_app_branch: "ansibilize"
