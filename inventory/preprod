@@ -1,0 +1,8 @@
+# stage:
+# ---------------
+
+[findit]
+findit-stage.library.jhu.edu
+
+[stage:children]
+findit

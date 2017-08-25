@@ -1,7 +1,0 @@
----
-- name: Old Infrastructure chruby 
-  hosts: all
-  become: true
-
-  roles:
-  - { role: chruby }
