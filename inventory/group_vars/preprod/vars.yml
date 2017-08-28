@@ -1,17 +1,16 @@
 ---
 # setup vars
-environ:  "dev" # dev || stage || prod
+environ:  "preprod" # dev || test || stage || prod 
 
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
 
 # apache vars:
-hostname:               "{{ app_name }}"
-domainname:             "test"
+hostname:               "{{ app_name }}-{{ environ }}"
+domainname:             "library.jhu.edu"
 apache_remove_welcome:  false
 apache_https:           true
 
-#rails_env: "development"
 rails_env: "production"
 
 #chruby_chruby_version: 0.3.9
@@ -31,7 +30,7 @@ passenger_deploy_rails:       true
 passenger_base_deploy_dir:    "/opt"
 
 findit_db_host:    "mariadb.dev.mse.jhu.edu"
-findit_db_name:    "findit_dev"
+findit_db_name:    "findit_test"
 findit_db_user:    "findit"
 findit_db_pass:    "{{ vault_findit_db_pass }}"
 findit_app_branch: "ansibilize"

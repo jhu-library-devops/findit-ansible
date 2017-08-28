@@ -1,0 +1,8 @@
+# preprod:
+# ---------------
+
+[findit]
+findit-preprod.library.jhu.edu
+
+[preprod:children]
+findit

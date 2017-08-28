@@ -28,6 +28,10 @@ deploy_user:                  "{{ login_user }}"
 deploy_key_name:              "findit_deploy_key"
 deploy_key_full_path:         "/home/{{ deploy_user }}/.ssh/{{ deploy_key_name }}"
 
+# apache vars
+apache_config_file:           "/etc/{{ apache_service }}/conf.d/01_{{ hostname }}.conf"
+# apache_config_template:     "templates/apache.conf.j2"
+
 # rails vars
 rails_env:                    "development"
 
