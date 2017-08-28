@@ -1,8 +1,8 @@
-# stage:
+# preprod:
 # ---------------
 
 [findit]
-findit-stage.library.jhu.edu
+findit-preprod.library.jhu.edu
 
-[stage:children]
+[preprod:children]
 findit
