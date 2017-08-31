@@ -1,8 +1,8 @@
-# prod:
+# preprod:
 # ---------------
 
 [findit]
-findit.library.jhu.edu
+findit-preprod.library.jhu.edu
 
 [prod:children]
 findit
