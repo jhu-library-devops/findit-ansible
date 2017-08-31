@@ -4,5 +4,5 @@
 [findit]
 findit-preprod.library.jhu.edu
 
-[prod:children]
+[preprod:children]
 findit
