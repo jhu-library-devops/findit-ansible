@@ -1,0 +1,8 @@
+# prod:
+# ---------------
+
+[findit]
+findit.library.jhu.edu
+
+[prod:children]
+findit
