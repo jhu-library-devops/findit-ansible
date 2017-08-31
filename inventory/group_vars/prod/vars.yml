@@ -1,6 +1,6 @@
 ---
 # setup vars
-environ:  "prod" # dev || test || stage || prod 
+environ:  "prod" # dev || test || stage || preprod || prod 
 
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
@@ -8,18 +8,10 @@ login_user_passphrase: "{{ vault_login_user_passphrase }}"
 # apache vars:
 hostname:               "{{ app_name }}"
 domainname:             "library.jhu.edu"
-apache_remove_welcome:  false
+apache_remove_welcome:  true
 apache_https:           true
 
 rails_env: "production"
-
-#chruby_chruby_version: 0.3.9
-#chruby_chruby_checksum: 7220a96e355b8a613929881c091ca85ec809153988d7d691299e0a16806b42fd
-#chruby_chruby_exec_command: /usr/local/bin/chruby-exec
-
-#chruby_ruby_install_version: 0.5.0
-#chruby_ruby_install_checksum: aa4448c2c356510cc7c2505961961a17bd3f3435842831e04c8516eb703afd19.
-#chruby_ruby_install_command: /usr/local/bin/ruby-install
 
 chruby_ruby_version: "ruby-2.2.2"
 
@@ -31,7 +23,7 @@ passenger_base_deploy_dir:    "/opt"
 
 findit_db_host:    "mysql.mse.jhu.edu"
 findit_db_name:    "umlaut3_prod"
-findit_db_user:    "umlaut"
+findit_db_user:    "{{ vault_findit_db_user }}"
 findit_db_pass:    "{{ vault_findit_db_pass }}"
 findit_app_branch: "ansibilize"
 
