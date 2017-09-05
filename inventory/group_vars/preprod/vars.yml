@@ -8,7 +8,7 @@ login_user_passphrase: "{{ vault_login_user_passphrase }}"
 # apache vars:
 hostname:               "{{ app_name }}-{{ environ }}"
 domainname:             "library.jhu.edu"
-apache_remove_welcome:  false
+apache_remove_welcome:  true
 apache_https:           true
 
 rails_env: "production"
@@ -22,22 +22,22 @@ passenger_deploy_rails:       true
 passenger_base_deploy_dir:    "/opt"
 
 findit_db_host:    "mariadb.dev.mse.jhu.edu"
-findit_db_name:    "findit_preprod"
-findit_db_user:    "findit"
+findit_db_name:    "findit_{{ environ }}"
+findit_db_user:    "{{ vault_findit_db_user }}"
 findit_db_pass:    "{{ vault_findit_db_pass }}"
 findit_app_branch: "ansibilize"
 
 sfx_db_host:    "sfx.library.jhu.edu"
 sfx_db_port:    "3310"
 sfx_db_name:    "sfxlcl41"
-sfx_db_user:    "externalapp"
+sfx_db_user:    "{{ vault_sfx_db_user }}"
 sfx_db_pass:    "{{ vault_sfx_db_pass }}"
 
 # TODO Cannot get os for findit role,  the env variables to load
 apache_service: "httpd"
 
 ssl_self_sign_cert:               false
-ssl_provided_cert:                false
+ssl_provided_cert:                false # certs placed on server by ops
 ssl_certificate_file:             "star_library.jhu.edu.crt"
 ssl_certificate_content:          "{{ vault_ssl_certificate_content }}"
 ssl_certificate_key_file:         "star_library.jhu.edu.key"
