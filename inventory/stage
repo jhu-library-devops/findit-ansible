@@ -2,7 +2,7 @@
 # ---------------
 
 [findit]
-test-findit.library.jhu.edu
+findit-stage.library.jhu.edu
 
 [stage:children]
 findit

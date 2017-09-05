@@ -1,6 +1,6 @@
 ---
 # setup vars
-environ:  "stage" # dev || test || stage || preprod || prod
+environ:  "test" # dev || test || stage || preprod || prod
 
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
@@ -37,7 +37,7 @@ sfx_db_pass:    "{{ vault_sfx_db_pass }}"
 apache_service: "httpd"
 
 ssl_self_sign_cert:               false
-ssl_provided_cert:                false # cert placed on server by ops
+ssl_provided_cert:                false # certs placed on server by ops
 ssl_certificate_file:             "star_library.jhu.edu.crt"
 ssl_certificate_content:          "{{ vault_ssl_certificate_content }}"
 ssl_certificate_key_file:         "star_library.jhu.edu.key"

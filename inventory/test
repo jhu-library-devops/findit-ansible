@@ -1,0 +1,8 @@
+# test:
+# ---------------
+
+[findit]
+findit-test.library.jhu.edu
+
+[test:children]
+findit
