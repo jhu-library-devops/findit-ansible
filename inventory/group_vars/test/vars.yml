@@ -23,7 +23,7 @@ passenger_base_deploy_dir:    "/opt"
 
 findit_db_host:    "mariadb.dev.mse.jhu.edu"
 findit_db_name:    "findit_{{ environ }}"
-findit_db_user:    "findit"
+findit_db_user:    "{{ vault_findit_db_user }}"
 findit_db_pass:    "{{ vault_findit_db_pass }}"
 findit_app_branch: "ansibilize"
 
