@@ -30,14 +30,14 @@ findit_app_branch: "ansibilize"
 sfx_db_host:    "sfx.library.jhu.edu"
 sfx_db_port:    "3310"
 sfx_db_name:    "sfxlcl41"
-sfx_db_user:    "externalapp"
+sfx_db_user:    "{{ vault_sfx_db_user }}"
 sfx_db_pass:    "{{ vault_sfx_db_pass }}"
 
 # TODO Cannot get os for findit role,  the env variables to load
 apache_service: "httpd"
 
 ssl_self_sign_cert:               false
-ssl_provided_cert:                false
+ssl_provided_cert:                false # certs on server by ops
 ssl_certificate_file:             "star_library.jhu.edu.crt"
 ssl_certificate_content:          "{{ vault_ssl_certificate_content }}"
 ssl_certificate_key_file:         "star_library.jhu.edu.key"
