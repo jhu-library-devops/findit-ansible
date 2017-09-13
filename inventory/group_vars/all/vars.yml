@@ -38,3 +38,8 @@ rails_env:                    "development"
 ssh_pub_keys:
  - ~/.ssh/findit-ansible/findit-ansible_dev.pub
 
+#shib
+shib_sp_cert:           "{{ vault_shib_sp_cert }}"
+shib_sp_key:            "{{ vault_shib_sp_key }}"
+shib_idp_metadata_xml:  "{{ vault_shib_idp_metadata_xml}}"
+shib_entity_id:         "findit.library.jhu.edu"
