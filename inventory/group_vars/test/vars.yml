@@ -25,7 +25,6 @@ findit_db_host:    "mariadb.dev.mse.jhu.edu"
 findit_db_name:    "findit_{{ environ }}"
 findit_db_user:    "{{ vault_findit_db_user }}"
 findit_db_pass:    "{{ vault_findit_db_pass }}"
-findit_app_branch: "ansibilize"
 
 sfx_db_host:    "sfx.library.jhu.edu"
 sfx_db_port:    "3310"
