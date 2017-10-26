@@ -30,7 +30,7 @@ Vagrant.configure(2) do |config|
   end
 
   {
-    'findit'   => '10.11.12.101',
+    'findit'   => '10.11.12.111',
   }.each do |short_name, ip|
     config.vm.define short_name do |host|
       host.vm.network 'private_network', ip: ip
