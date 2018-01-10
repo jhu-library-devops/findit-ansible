@@ -21,6 +21,7 @@
   name: findit
 
 - src: https://github.com/dheles/deploy-keys-ansible-role
+  version: v1.0.0
   name: deploy-keys
 
 - src: https://github.com/farooqsadiq/shibboleth-sp-ansible-role
