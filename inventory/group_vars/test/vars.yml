@@ -13,6 +13,8 @@ apache_https:           true
 
 rails_env: "production"
 
+app_branch: "development"
+
 chruby_ruby_version: "ruby-2.2.2"
 
 findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private_key }}"
