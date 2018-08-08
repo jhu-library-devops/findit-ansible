@@ -1,7 +1,7 @@
 # dev (vagrant):
 # ------------------
 [findit]
-findit.test
+findit-dev.test
 
 [dev:children]
 findit

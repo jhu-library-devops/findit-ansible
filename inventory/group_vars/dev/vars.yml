@@ -6,7 +6,7 @@ environ:  "dev" # dev || test || stage || preprod || prod
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
 
 # apache vars:
-hostname:               "{{ app_name }}"
+hostname:               "{{ app_name }}-{{environ}}"
 domainname:             "test"
 apache_remove_welcome:  false
 apache_https:           true
