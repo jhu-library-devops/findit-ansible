@@ -49,3 +49,10 @@ shib_entity_id:         "findit.library.jhu.edu"
 # because the official list ( https://mirrors.opensuse.org/ )
 # is mostly mirrors of the openSUSE project, and not the repos we need
 shib_repo_baseurl:      "http://ftp.gwdg.de/pub/opensuse/repositories/security:/shibboleth/CentOS_7/"
+
+sfx_url: 'http://sfx.library.jhu.edu:8000/sfxlcl41'
+
+blacklight_url: 'https://catalyst-test.library.jhu.edu'
+
+borrow_direct_horizon_borrower_lookup_url: "{{ vault_borrow_direct_horizon__borrower_lookup_url }}"
+borrow_direct_api_key: "{{ vault_borrow_direct_api_key }}"
