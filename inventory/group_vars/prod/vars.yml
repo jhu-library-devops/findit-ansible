@@ -33,6 +33,9 @@ sfx_db_port:    "3310"
 sfx_db_name:    "sfxlcl41"
 sfx_db_user:    "{{ vault_sfx_db_user }}"
 sfx_db_pass:    "{{ vault_sfx_db_pass }}"
+sfx_url:        'http://sfx.library.jhu.edu:8000/sfxlcl41'
+
+blacklight_url: 'https://catalyst.library.jhu.edu'
 
 # TODO Cannot get os for findit role,  the env variables to load
 apache_service: "httpd"
@@ -46,3 +49,4 @@ ssl_certificate_key_content:      "{{ vault_ssl_certificate_key_content }}"
 ssl_certificate_chain_file:       "star_library.jhu.edu_interm.crt"
 ssl_certificate_chain_content:    "{{ vault_ssl_certificate_chain_content }}"
 ssl_certificate_chain_path:       "/etc/pki/tls/certs"
+
