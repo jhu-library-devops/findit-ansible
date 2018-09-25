@@ -15,7 +15,7 @@ rails_env: "production"
 
 chruby_ruby_version: "ruby-2.2.2"
 
-app_branch: "v1.1.0"
+app_branch: "v1.1.1"
 
 findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private_key }}"
 findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"
@@ -50,3 +50,4 @@ ssl_certificate_chain_file:       "star_library.jhu.edu_interm.crt"
 ssl_certificate_chain_content:    "{{ vault_ssl_certificate_chain_content }}"
 ssl_certificate_chain_path:       "/etc/pki/tls/certs"
 
+google_tag_manager_id: "{{ vault_google_tag_manager_id }}"
