@@ -8,7 +8,7 @@ domain          = "test"
 setup_complete  = false
 
 # NOTE: currently using the same OS for all boxen
-OS="centos" # "debian" || "centos"
+os = "centos" # "debian" || "centos"
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -17,10 +17,10 @@ OS="centos" # "debian" || "centos"
 Vagrant.configure(2) do |config|
 
   package=""
-  if OS=="debian"
+  if  os =="debian"
     config.vm.box = "debian/jessie64"
     package="_apt"
-  elsif OS=="centos"
+  elsif os =="centos"
     config.vm.box = "centos/7"
     config.vm.box_version = "1804.02" # 7.5.1804
     package="_yum"

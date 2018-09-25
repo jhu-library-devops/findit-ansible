@@ -57,3 +57,5 @@ blacklight_url: 'https://catalyst-test.library.jhu.edu'
 borrow_direct_horizon_borrower_lookup_url: "{{ vault_borrow_direct_horizon_borrower_lookup_url }}"
 borrow_direct_api_key: "{{ vault_borrow_direct_api_key }}"
 borrow_direct_api_base: "{{ vault_borrow_direct_api_base }}"
+
+google_tag_manager_id: "{{ vault_google_tag_manager_id }}"
