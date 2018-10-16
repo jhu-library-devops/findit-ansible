@@ -59,3 +59,17 @@ borrow_direct_api_key: "{{ vault_borrow_direct_api_key }}"
 borrow_direct_api_base: "{{ vault_borrow_direct_api_base }}"
 
 google_tag_manager_id: "{{ vault_google_tag_manager_id }}"
+
+logrotate_configs:
+  - name: "{{ app_name }}"
+    path: "{{ deploy_dir }}/log"
+    setype: "var_log_t"
+    options:
+      - "su {{ app_user }} {{ app_user }}"
+      - "daily"
+      - "rotate 24"
+      - "compress"
+      - "delaycompress"
+      - "missingok"
+      - "create 0600"
+      - "dateext"
