@@ -9,3 +9,4 @@
     - { role: deploy-keys, tags: ['deploy-keys']}
     - { role: findit, tags: ['findit'] }
     - { role: shib, tags: ['shib'] }
+    - { role: logrotate, tags: ['logrotate'] }
