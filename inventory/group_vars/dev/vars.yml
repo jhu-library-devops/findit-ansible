@@ -3,19 +3,19 @@
 environ:  "dev" # dev || test || stage || preprod || prod
 
 # private vars
-login_user_passphrase: "{{ vault_login_user_passphrase }}"
+login_user_passphrase:  "{{ vault_login_user_passphrase }}"
 
 # apache vars:
 hostname:               "{{ app_name }}-{{environ}}"
-domainname:             "test"
+domainname:             "library.jhu.edu"
 apache_remove_welcome:  false
 apache_https:           true
 
 rails_env: "development"  # development || production
 
-chruby_ruby_version: "ruby-2.2.2"
+chruby_ruby_version: "ruby-2.3.6"
 
-app_branch:          "development"
+app_branch:          "ruby-2.3.6"
 
 findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private_key }}"
 findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"

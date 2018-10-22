@@ -1,8 +1,8 @@
-# test:
-# ---------------
-
-[findit]
-findit-test.library.jhu.edu
-
-[test:children]
-findit
+---
+findit:
+  hosts:
+    findit-test.library.jhu.edu
+  children:
+    test:
+      hosts:
+        findit-test.library.jhu.edu

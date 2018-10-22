@@ -1,7 +1,17 @@
-# dev (vagrant):
-# ------------------
-[findit]
-findit-dev.test
-
-[dev:children]
-findit
+---
+all:
+  hosts:
+    findit-dev.test:
+      state: present # if =absent vagrant will ignore
+      vagrant_box_image: 'centos/7'
+      vagrant_box_version: '1802.01' # latest 7.4.1708
+      cpus: 1
+      memory: 2048
+      ansible_ip: '10.11.12.111'
+      aliases:
+        - 'findit-dev'
+        - 'findit-dev.library.jhu.edu'
+  children:
+    dev:
+      hosts:
+        findit-dev.test: 

@@ -1,6 +1,6 @@
 ---
 - name: Build FindIt
-  hosts: findit
+  hosts: all
 
   roles:
     - { role: chruby, become: true }

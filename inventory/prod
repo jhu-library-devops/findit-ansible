@@ -1,8 +1,8 @@
-# prod:
-# ---------------
-
-[findit]
-findit.library.jhu.edu
-
-[prod:children]
-findit
+---
+findit:
+  hosts:
+    findit.library.jhu.edu
+  children:
+    prod:
+      hosts:
+        findit.library.jhu.edu
