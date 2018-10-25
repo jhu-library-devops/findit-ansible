@@ -13,7 +13,7 @@ apache_https:           true
 
 rails_env: "production"
 
-app_branch: "ruby-2.3.6"
+app_branch: "development"
 
 chruby_chruby_version: "0.3.9"
 chruby_ruby_version: "ruby-2.3.6"
