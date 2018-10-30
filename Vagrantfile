@@ -12,14 +12,14 @@ Vagrant.configure('2') do |config|
   inventory = YAML.load_file(inventory_path)
   ansible_hosts = inventory['all']['hosts']
 
-  ansible_limit = ansible_hosts.map{ | host_name, host | "#{host_name}" }.join(',') || 'all'
-
   # delete status = absent
   ansible_hosts.map do |name, vars|
     # skip hosts marked as absent
     ansible_hosts.delete(name)  if (  vars['state'] == 'absent' )
   end 
 
+  ansible_limit = ansible_hosts.map{ | host_name, host | "#{host_name}" }.join(',') || 'all'
+  
   ansible_hosts.each_with_index do | (host_name, host_vars), index|
     config.vm.define host_name do |host|
  
