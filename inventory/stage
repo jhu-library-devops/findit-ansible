@@ -1,8 +1,8 @@
-# stage:
-# ---------------
-
-[findit]
-findit-stage.library.jhu.edu
-
-[stage:children]
-findit
+---
+findit:
+  hosts:
+    findit-stage.library.jhu.edu
+  children:
+    stage:
+      hosts:
+        findit-stage.library.jhu.edu

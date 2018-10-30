@@ -11,7 +11,7 @@
 - src: https://github.com/dheles/ansible-role-apache
   name: apache
 
-- src: https://github.com/dheles/ansible-role-passenger
+- src: https://github.com/farooqsadiq/ansible-role-passenger
   name: passenger
 
 - src: https://github.com/dheles/ansible-chruby.git
@@ -25,7 +25,6 @@
   name: deploy-keys
 
 - src: https://github.com/farooqsadiq/shibboleth-sp-ansible-role
-  version: v1.0
   name: shib
 
 - src: https://github.com/dheles/logrotate-ansible-role

@@ -1,10 +1,10 @@
 ---
 - name: Build FindIt
-  hosts: findit
+  hosts: all
 
   roles:
-    - { role: chruby, become: true }
-    - { role: apache, become: true }
+    - { role: chruby, become: true, become_user: root, tags: ['chruby'] }
+    - { role: apache, become: true , become_user: root, tags: ['apache']}
     - { role: passenger, tags: ['passenger'] }
     - { role: deploy-keys, tags: ['deploy-keys']}
     - { role: findit, tags: ['findit'] }

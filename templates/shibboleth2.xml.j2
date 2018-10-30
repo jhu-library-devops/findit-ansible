@@ -20,7 +20,7 @@
     -->
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
-    <ApplicationDefaults entityID="https://{{ shib_entity_id }}/shibboleth"
+    <ApplicationDefaults entityID="{{ shib_entity_id }}"
                          REMOTE_USER="eppn persistent-id targeted-id"
 			signing="false" encryption="false" >
 
@@ -43,7 +43,7 @@
             (Set discoveryProtocol to "WAYF" for legacy Shibboleth WAYF support.)
             You can also override entityID on /Login query string, or in RequestMap/htaccess.
             -->
-            <SSO entityID="https://shibboleth.jh.edu/idp/shibboleth"
+            <SSO entityID="{{ shib_idp_entity_id }}"
                  discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
               SAML2 SAML1
             </SSO>
@@ -68,7 +68,7 @@
         Allows overriding of error template information/filenames. You can
         also add attributes with values that can be plugged into the templates.
         -->
-        <Errors supportContact="fsadiq1@jhu.edu"
+        <Errors supportContact="{{ shib_contact }}"
             helpLocation="/about.html"
             styleSheet="/shibboleth-sp/main.css"/>
 
@@ -89,7 +89,6 @@
         <!-- Example of locally maintained metadata. -->
 
         <MetadataProvider type="XML" file="idp-metadata.xml"/>
-
 
         <!-- Map to extract attributes from SAML assertions. -->
         <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
