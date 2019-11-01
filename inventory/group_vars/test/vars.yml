@@ -4,6 +4,7 @@ environ:  "test" # dev || test || stage || preprod || prod
 
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
+login_user_grant_sudo:  true
 
 # apache vars:
 hostname:               "{{ app_name }}-{{ environ }}"

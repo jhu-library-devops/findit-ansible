@@ -3,10 +3,10 @@
   hosts: all
 
   roles:
-    - { role: chruby, become: true, become_user: root, tags: ['chruby'] }
-    - { role: apache, become: true , become_user: root, tags: ['apache']}
+    - { role: chruby, become: true, tags: ['chruby'] }
+    - { role: apache, become: true , tags: ['apache']}
     - { role: passenger, tags: ['passenger'] }
-    - { role: deploy-keys, tags: ['deploy-keys']}
+    - { role: deploy-keys, tags: ['deploy-keys'], deploy_keys: "{{ findit_deploy_keys }}"}
     - { role: findit, tags: ['findit'] }
     - { role: shib, tags: ['shib'] }
     - { role: logrotate, tags: ['logrotate'] }

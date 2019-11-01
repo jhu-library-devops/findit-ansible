@@ -4,7 +4,8 @@
 # setup vars
 project:        "findit-ansible"
 version:        "0.1.0"
-login_user:     "deploy"
+remote_user:              "{{ lookup('ini', 'remote_user section=cross-project file=~/.ansible.ini') }}"
+login_user:               "{{ lookup('ini', 'login_user section=cross-project file=~/.ansible.ini') }}"
 
 # ssh vars
 ssh_port: 22
@@ -22,11 +23,13 @@ base_deploy_dir:              "/opt"
 deploy_dir:                   "{{ base_deploy_dir }}/{{ app_name }}"
 
 # deploy keys vars
-deploy_private_key:           "{{ vault_deploy_private_key }}"
-deploy_public_key:            "{{ vault_deploy_public_key }}"
 deploy_user:                  "{{ login_user }}"
 deploy_key_name:              "findit_deploy_key"
 deploy_key_full_path:         "/home/{{ deploy_user }}/.ssh/{{ deploy_key_name }}"
+findit_deploy_keys:
+- name:                       "{{ deploy_key_name }}"
+  private_key:                "{{ vault_deploy_private_key }}"
+  public_key:                 "{{ vault_deploy_public_key }}"
 
 # apache vars
 apache_config_file:           "/etc/{{ apache_service }}/conf.d/01_{{ hostname }}.conf"
