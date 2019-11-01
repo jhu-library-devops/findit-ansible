@@ -23,4 +23,9 @@ Test the service at https://findit.test/
 
 Inventory exists for test, stage and productions servers.  To deploy to a new server configured by Operations.
 
+```
+Test server
+ansible-playbook -i inventory/test main.yml -v -K
+```
+
 
