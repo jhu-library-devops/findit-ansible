@@ -4,6 +4,7 @@ environ:  "prod" # dev || test || stage || preprod || prod
 
 # private vars
 login_user_passphrase: "{{ vault_login_user_passphrase }}"
+login_user_grant_sudo:  true
 
 # apache vars:
 hostname:               "{{ app_name }}"
@@ -13,12 +14,13 @@ apache_https:           true
 
 rails_env: "production"
 
+#app_branch: "v1.2.0" #app_branch: "v1.2.0"
+app_branch: "curbside-borrowdirect"
+
 chruby_chruby_version: "0.3.9"
 chruby_ruby_version: "ruby-2.3.6"
 chruby_outdated_ruby_versions:
   - ruby-2.2.2
-
-app_branch: "v1.2.0"
 
 findit_app_user_ssh_private_key:           "{{ vault_findit_app_user_ssh_private_key }}"
 findit_app_user_ssh_public_key:            "{{ vault_findit_app_user_ssh_public_key }}"

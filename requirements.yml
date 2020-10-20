@@ -2,30 +2,38 @@
 # REM: maunally install before using with
 # $ ansible-galaxy install -r requirements.yml
 
-- src: https://github.com/jhu-sheridan-libraries/ansible-role-login-user
+- src: git@github.com:jhu-sheridan-libraries/ansible-role-login-user.git
+  scm: git
   name: login-user
 
-- src: https://github.com/jhu-sheridan-libraries/ansible-role-secure-ssh
+- src: git@github.com:jhu-sheridan-libraries/ansible-role-secure-ssh.git
+  scm: git
   name: secure-ssh
 
-- src: https://github.com/jhu-sheridan-libraries/ansible-role-apache
+- src: git@github.com:jhu-sheridan-libraries/ansible-role-apache.git
+  scm: git
   name: apache
 
-- src: https://github.com/jhu-sheridan-libraries/ansible-role-passenger
+- src: git@github.com:jhu-sheridan-libraries/ansible-role-passenger.git
+  scm: git
   name: passenger
 
-- src: https://github.com/jhu-sheridan-libraries/ansible-chruby
+- src: git@github.com:jhu-sheridan-libraries/ansible-chruby.git
+  scm: git
   name: chruby
 
-- src: https://github.com/jhu-sheridan-libraries/findit-ansible-role
+- src: git@github.com:jhu-sheridan-libraries/findit-ansible-role.git
+  scm: git
   name: findit
 
-- src: https://github.com/jhu-sheridan-libraries/deploy-keys-ansible-role
-  version: v1.0.0
+- src: git@github.com:jhu-sheridan-libraries/deploy-keys-ansible-role.git
   name: deploy-keys
+  scm: git
 
-- src: https://github.com/jhu-sheridan-libraries/shibboleth-sp-ansible-role
+- src: git@github.com:jhu-sheridan-libraries/shibboleth-sp-ansible-role.git
+  scm: git
   name: shib
 
-- src: https://github.com/jhu-sheridan-libraries/logrotate-ansible-role
+- src: git@github.com:jhu-sheridan-libraries/logrotate-ansible-role.git
+  scm: git
   name: logrotate
