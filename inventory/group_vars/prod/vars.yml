@@ -60,4 +60,4 @@ google_tag_manager_id: "{{ vault_google_tag_manager_id }}"
 findit_cron_minute:          20
 findit_cron_hour:            2
 findit_cron_log_file:        "{{ deploy_dir }}/log/nightly_maintenance.log"
-findit_cron_command:         "/bin/bash -lc 'cd {{ deploy_dir }} && bundle exec rake umlaut:nightly_maintenance >> {{ findit_cron_log_file }} 2>&1'"
+findit_cron_command:         "/bin/bash -lc 'cd {{ deploy_dir }} && bundle exec rake umlaut:local_nightly_maintenance >> {{ findit_cron_log_file }} 2>&1'"
