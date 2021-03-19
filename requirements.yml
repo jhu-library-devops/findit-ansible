@@ -22,7 +22,7 @@
   scm: git
   name: chruby
 
-- src: git@github.com:jhu-sheridan-libraries/findit-ansible-role.git
+- src: git@github.com:jhu-library-devops/findit-ansible-role.git
   scm: git
   name: findit
 
